@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Finance Command Center</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">₹</div>
+        <div>
+          <h1>Finance Command</h1>
+          <p>Riza Personal System</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="active" data-screen="dashboard">Dashboard</button>
+        <button data-screen="transactions">Transactions</button>
+        <button data-screen="budget">Budget</button>
+        <button data-screen="accounts">Accounts</button>
+        <button data-screen="cards">Credit Cards</button>
+        <button data-screen="loans">Loans & Debts</button>
+        <button data-screen="bills">Utility Bills</button>
+        <button data-screen="goals">Goals</button>
+        <button data-screen="reports">Reports</button>
+        <button data-screen="sync">Google Drive Sync</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="screenTitle">Dashboard</h2>
+          <p id="screenSubtitle">Your money position, risks, goals and monthly control.</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn secondary" id="exportBtn">Export Backup</button>
+          <label class="btn secondary">
+            Import Backup
+            <input type="file" id="importFile" accept="application/json" hidden />
+          </label>
+          <button class="btn danger" id="resetBtn">Reset</button>
+        </div>
+      </header>
+
+      <section id="dashboard" class="screen active"></section>
+      <section id="transactions" class="screen"></section>
+      <section id="budget" class="screen"></section>
+      <section id="accounts" class="screen"></section>
+      <section id="cards" class="screen"></section>
+      <section id="loans" class="screen"></section>
+      <section id="bills" class="screen"></section>
+      <section id="goals" class="screen"></section>
+      <section id="reports" class="screen"></section>
+      <section id="sync" class="screen"></section>
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
